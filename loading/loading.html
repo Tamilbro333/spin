@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #eb54f1;
+        }
+        div {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            margin-left: 40%;
+            margin-top: 15%;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        button {
+            width: 80px;
+            height: 80px;
+            font-family: fantasy;
+            font-size: 30px;
+            color: red;
+            border-radius: 50%;
+            margin-left: 45%;
+        }
+        button:hover {
+            box-shadow: 2px 2px 2px rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="spinner"></div>
+    <center><h1>Loading...</h1></center>
+    <button id="stopButton">Stop</button>
+    
+    <script>
+        document.getElementById('stopButton').addEventListener('click', function() {
+            var spinner = document.getElementById('spinner');
+            spinner.style.animation = 'none';
+        });
+    </script>
+</body>
+</html>
